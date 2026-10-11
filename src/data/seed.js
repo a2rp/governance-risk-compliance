@@ -25,10 +25,10 @@ export const seedControls = [
 ];
 
 export const seedAudits = [
-    { id: "AUD-026", name: "SOC 2 operating effectiveness", framework: "SOC 2", lead: "Nora Bennett", status: "In progress", startDate: "2026-09-21", dueDate: "2026-10-20", controls: ["CTL-104", "CTL-118", "CTL-126", "CTL-166"], progress: 68 },
-    { id: "AUD-031", name: "PCI DSS quarterly review", framework: "PCI DSS", lead: "Theo Martin", status: "Scheduled", startDate: "2026-10-15", dueDate: "2026-10-29", controls: ["CTL-179", "CTL-104"], progress: 0 },
-    { id: "AUD-019", name: "Subprocessor privacy assessment", framework: "Privacy", lead: "Amara Okafor", status: "In progress", startDate: "2026-10-01", dueDate: "2026-10-24", controls: ["CTL-143", "CTL-184"], progress: 42 },
-    { id: "AUD-014", name: "ISO 27001 internal audit", framework: "ISO 27001", lead: "Nora Bennett", status: "Complete", startDate: "2026-08-08", dueDate: "2026-09-18", controls: ["CTL-151", "CTL-118"], progress: 100 },
+    { id: "AUD-026", name: "SOC 2 operating effectiveness", framework: "SOC 2", lead: "Nora Bennett", status: "In progress", startDate: "2026-09-21", dueDate: "2026-10-20", controls: ["CTL-104", "CTL-118", "CTL-126", "CTL-166"], checkedControls: ["CTL-104", "CTL-118", "CTL-166"], progress: 75 },
+    { id: "AUD-031", name: "PCI DSS quarterly review", framework: "PCI DSS", lead: "Theo Martin", status: "Scheduled", startDate: "2026-10-15", dueDate: "2026-10-29", controls: ["CTL-179", "CTL-104"], checkedControls: [], progress: 0 },
+    { id: "AUD-019", name: "Subprocessor privacy assessment", framework: "Privacy", lead: "Amara Okafor", status: "In progress", startDate: "2026-10-01", dueDate: "2026-10-24", controls: ["CTL-143", "CTL-184"], checkedControls: ["CTL-143"], progress: 50 },
+    { id: "AUD-014", name: "ISO 27001 internal audit", framework: "ISO 27001", lead: "Nora Bennett", status: "Complete", startDate: "2026-08-08", dueDate: "2026-09-18", controls: ["CTL-151", "CTL-118"], checkedControls: ["CTL-151", "CTL-118"], progress: 100 },
 ];
 
 export const seedIssues = [
