@@ -42,7 +42,6 @@ const useGrcState = (notify) => {
             if (item.id !== id) return item;
             const next = { ...item, ...changes };
             if (next.status === "Complete") next.progress = 100;
-            if (next.status === "In progress" && next.progress === 0) next.progress = 12;
             return next;
         }));
         notify("Audit plan status updated.");
