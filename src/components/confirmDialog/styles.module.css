@@ -1,0 +1,42 @@
+.content {
+    display: grid;
+    gap: 18px;
+
+    .icon {
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        color: #9b483a;
+        background: #fbebe7;
+        border: 1px solid #f0d3cc;
+        border-radius: 15px;
+        svg { width: 22px; height: 22px; }
+    }
+
+    .primary { color: #315f54; background: #e5f0e8; border-color: #ccdfd2; }
+    p { color: var(--color-ink-soft); font-size: 14px; line-height: 1.6; }
+
+    .actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 2px; }
+    .cancel, .confirmPrimary, .confirmDanger {
+        min-height: 44px;
+        padding: 0 17px;
+        border: 1px solid var(--color-border);
+        border-radius: 11px;
+        font-size: 14px;
+        font-weight: 650;
+        text-decoration: none;
+        transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+        &:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+    }
+    .cancel { color: var(--color-ink); background: white; &:hover { border-color: #9ca39f; box-shadow: 0 4px 12px rgb(34 45 55 / 8%); } }
+    .confirmPrimary { color: white; border-color: #315f54; background: #315f54; &:hover { border-color: #264b42; background: #264b42; box-shadow: 0 5px 14px rgb(49 95 84 / 18%); } }
+    .confirmDanger { color: white; border-color: #9b483a; background: #9b483a; &:hover { border-color: #78362d; background: #78362d; box-shadow: 0 5px 14px rgb(155 72 58 / 18%); } }
+}
+
+@media (max-width: 480px) {
+    .content {
+        .actions { display: grid; grid-template-columns: 1fr 1fr; }
+        .actions button { padding: 0 10px; }
+    }
+}
