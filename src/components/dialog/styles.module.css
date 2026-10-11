@@ -1,0 +1,68 @@
+.overlay {
+    position: fixed;
+    z-index: 120;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: rgb(31 38 44 / 52%);
+    backdrop-filter: blur(7px);
+    animation: fadeIn 160ms ease-out;
+
+    .dialog {
+        width: min(560px, 100%);
+        max-height: min(86vh, 780px);
+        overflow: auto;
+        border: 1px solid rgb(48 54 54 / 14%);
+        border-radius: 22px;
+        background: var(--color-surface);
+        box-shadow: 0 24px 74px rgb(20 27 29 / 24%);
+    }
+
+    .narrow { width: min(460px, 100%); }
+    .wide { width: min(760px, 100%); }
+
+    .header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 22px;
+        padding: 25px 26px 20px;
+        border-bottom: 1px solid var(--color-border);
+
+        h2 { color: var(--color-ink); font-size: 22px; font-weight: 720; letter-spacing: -0.025em; }
+        p { margin-top: 5px; color: var(--color-muted); font-size: 14px; line-height: 1.55; }
+    }
+
+    .close {
+        flex: 0 0 auto;
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        color: var(--color-ink-soft);
+        border: 1px solid var(--color-border);
+        border-radius: 11px;
+        background: white;
+        transition: border-color 160ms ease, box-shadow 160ms ease;
+
+        svg { width: 18px; height: 18px; }
+        &:hover, &:focus-visible { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgb(155 72 58 / 12%); }
+        &:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+    }
+
+    .body { padding: 24px 26px 26px; }
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+@media (max-width: 560px) {
+    .overlay {
+        align-items: end;
+        padding: 12px;
+        .dialog { max-height: 91vh; border-radius: 20px; }
+        .header, .body { padding-right: 20px; padding-left: 20px; }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) { .overlay { animation: none; } }
