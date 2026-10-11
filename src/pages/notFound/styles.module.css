@@ -1,0 +1,113 @@
+﻿.page {
+    min-height: 58vh;
+    display: grid;
+    grid-template-columns: minmax(240px, 0.85fr) minmax(300px, 1fr);
+    align-items: center;
+    gap: clamp(36px, 8vw, 112px);
+    padding: 64px clamp(20px, 7vw, 96px);
+    color: var(--ink);
+
+    .art {
+        position: relative;
+        min-height: 320px;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--paper-deep);
+
+        span {
+            color: rgb(51 66 61 / 8%);
+            font-size: clamp(108px, 19vw, 240px);
+            font-weight: 700;
+            letter-spacing: -0.1em;
+            line-height: 1;
+        }
+
+        svg {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            color: var(--rust);
+            stroke-width: 1.4;
+        }
+    }
+
+    .copy {
+        max-width: 520px;
+    }
+
+    .label {
+        margin-bottom: 14px;
+        color: var(--rust);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+    }
+
+    h1 {
+        max-width: 480px;
+        color: var(--ink);
+        font-family: var(--font-display);
+        font-size: clamp(34px, 5vw, 58px);
+        font-weight: 600;
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+    }
+
+    .description {
+        max-width: 420px;
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .homeLink {
+        width: fit-content;
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 28px;
+        padding: 0 18px;
+        border: 1px solid var(--ink);
+        border-radius: 5px;
+        background: var(--ink);
+        color: white;
+        font-size: 14px;
+        font-weight: 650;
+        transition: box-shadow 180ms ease, border-color 180ms ease, background-color 180ms ease;
+
+        &:hover {
+            border-color: var(--rust);
+            background: var(--rust);
+            box-shadow: 0 7px 18px rgb(110 56 40 / 18%);
+        }
+
+        &:focus-visible {
+            outline: 3px solid var(--celadon);
+            outline-offset: 3px;
+        }
+
+        svg {
+            width: 17px;
+            height: 17px;
+        }
+    }
+
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 44px 20px;
+
+        .art {
+            min-height: 210px;
+        }
+
+        .art span {
+            font-size: 140px;
+        }
+    }
+}
