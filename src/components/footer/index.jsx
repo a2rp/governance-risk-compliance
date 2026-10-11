@@ -3,7 +3,7 @@ import { FiCoffee, FiGlobe, FiLifeBuoy, FiMail } from "react-icons/fi";
 import { Tooltip } from "react-tooltip";
 import styles from "./styles.module.css";
 
-const links = [
+const currentYear = new Date().getFullYear();`r`n`r`nconst links = [
     { label: "Portfolio", detail: "ashishranjan.net", href: "https://www.ashishranjan.net", icon: <FiGlobe aria-hidden="true" /> },
     { label: "GitHub", detail: "github.com/a2rp", href: "https://github.com/a2rp", icon: <FaGithub aria-hidden="true" /> },
     { label: "CodePen", detail: "codepen.io/ash1198", href: "https://codepen.io/ash1198", icon: <FaCodepen aria-hidden="true" /> },
@@ -25,7 +25,7 @@ const Footer = () => (
                     <span>Candor</span>
                 </a>
                 <p>Sample workspace. No live compliance system connected.</p>
-                <small>© {new Date().getFullYear()} <a href="https://www.ashishranjan.net" rel="noreferrer" target="_blank">Ashish Ranjan</a>. All rights reserved.</small>
+                <small>&copy; {currentYear} <a href="https://www.ashishranjan.net" rel="noreferrer" target="_blank">Ashish Ranjan</a>. All rights reserved.</small>
             </div>
             <nav aria-label="Footer links" className={styles.links}>
                 {links.map((item) => (
