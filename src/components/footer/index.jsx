@@ -3,7 +3,9 @@ import { FiCoffee, FiGlobe, FiLifeBuoy, FiMail } from "react-icons/fi";
 import { Tooltip } from "react-tooltip";
 import styles from "./styles.module.css";
 
-const currentYear = new Date().getFullYear();`r`n`r`nconst links = [
+const currentYear = new Date().getFullYear();
+
+const links = [
     { label: "Portfolio", detail: "ashishranjan.net", href: "https://www.ashishranjan.net", icon: <FiGlobe aria-hidden="true" /> },
     { label: "GitHub", detail: "github.com/a2rp", href: "https://github.com/a2rp", icon: <FaGithub aria-hidden="true" /> },
     { label: "CodePen", detail: "codepen.io/ash1198", href: "https://codepen.io/ash1198", icon: <FaCodepen aria-hidden="true" /> },
