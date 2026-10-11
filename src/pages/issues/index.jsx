@@ -53,7 +53,8 @@ const IssuesPage = ({ issues, controls, saveIssue, updateIssue, deleteIssue }) =
     const clearFilters = () => { setQuery(""); setSeverityFilter("All severities"); setLikelihoodFilter("All likelihoods"); setStatusFilter("All statuses"); setDomainFilter("All domains"); setSortBy("Risk priority"); };
     const exportIssues = () => downloadCsv("candor-findings.csv", ["ID", "Finding", "Severity", "Likelihood", "Domain", "Owner", "Due date", "Status", "Control", "Remediation note"], filteredIssues.map((item) => [item.id, item.title, item.severity, item.likelihood, item.domain, item.owner, item.dueDate, item.status, controls.find((control) => control.id === item.controlId)?.name, item.description]));
     const openCount = issues.filter((item) => item.status !== "Closed").length;
-    const overdueCount = issues.filter((item) => item.status !== "Closed" && item.dueDate < "2026-10-11").length;
+    const today = new Date().toISOString().slice(0, 10);
+    const overdueCount = issues.filter((item) => item.status !== "Closed" && item.dueDate < today).length;
 
     return (
         <div className={styles.page}>
