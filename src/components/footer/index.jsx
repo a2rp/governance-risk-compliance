@@ -1,5 +1,5 @@
 import { FaCodepen, FaFacebookF, FaGithub, FaLinkedinIn, FaPatreon, FaYoutube } from "react-icons/fa";
-import { FiCoffee, FiGlobe, FiLifeBuoy, FiMail } from "react-icons/fi";
+import { FiCode, FiCoffee, FiGlobe, FiLifeBuoy, FiMail } from "react-icons/fi";
 import { Tooltip } from "react-tooltip";
 import styles from "./styles.module.css";
 
@@ -8,6 +8,7 @@ const currentYear = new Date().getFullYear();
 const links = [
     { label: "Portfolio", detail: "ashishranjan.net", href: "https://www.ashishranjan.net", icon: <FiGlobe aria-hidden="true" /> },
     { label: "GitHub", detail: "github.com/a2rp", href: "https://github.com/a2rp", icon: <FaGithub aria-hidden="true" /> },
+    { label: "Source code", detail: "github.com/a2rp/governance-risk-compliance", href: "https://github.com/a2rp/governance-risk-compliance", icon: <FiCode aria-hidden="true" /> },
     { label: "CodePen", detail: "codepen.io/ash1198", href: "https://codepen.io/ash1198", icon: <FaCodepen aria-hidden="true" /> },
     { label: "LinkedIn", detail: "linkedin.com/in/aashishranjan", href: "https://www.linkedin.com/in/aashishranjan", icon: <FaLinkedinIn aria-hidden="true" /> },
     { label: "Facebook", detail: "facebook.com/theash.ashish", href: "https://www.facebook.com/theash.ashish/", icon: <FaFacebookF aria-hidden="true" /> },
